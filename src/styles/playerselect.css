@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+  background-color: rgb(44, 46, 39);
+  background-image: url(../images/tree.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+  color: rgb(243, 161, 39);
+}
+
+h1 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}

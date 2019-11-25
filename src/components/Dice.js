@@ -7,7 +7,7 @@ function Dice(props) {
       <button onClick={() => props.setEyes((Math.random() + 1) * 6)}>
         Roll
       </button>
-      <img src={props.imageUrl} />
+      <img src={props.imageUrl} alt="" />
     </div>
   );
 }
