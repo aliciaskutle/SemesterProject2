@@ -9,6 +9,11 @@ body {
   color: rgb(243, 161, 39);
 }
 
+.content {
+  width: 70%;
+  margin: 0 auto;
+}
+
 h1 {
   text-transform: uppercase;
   margin: 0;

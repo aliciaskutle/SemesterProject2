@@ -5,7 +5,7 @@ import PlayerCard from "./PlayerCard";
 
 function PlayerSelect() {
   return (
-    <div>
+    <div className="content">
       <Logo />
       <h1>Select two players</h1>
       <h2>to compete against each other</h2>

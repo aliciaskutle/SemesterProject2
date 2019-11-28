@@ -1,14 +1,15 @@
 import React from "react";
 import "./App.css";
-import PlayerSelect from "./components/PlayerSelect";
-/*import Boardgame from "./components/Boardgame";
+import Boardgame from "./components/Boardgame";
+/*import PlayerSelect from "./components/PlayerSelect";
 import Result from "./components/Result";*/
 
 function App() {
   return (
     <div className="App">
-      <PlayerSelect />
-      {/*<Boardgame />
+      <Boardgame />
+
+      {/*<PlayerSelect />
       <Result /> */}
     </div>
   );
