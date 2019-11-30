@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/playercard.css";
+import CardInfo from "./CardInfo";
 
-function PlayerCard() {
+function PlayerCard(props) {
+  const [loading, setLoading] = useState(true);
+  const [person, setPerson] = useState(null);
+
+  useEffect(() => {
+    fetch(`https://anapioficeandfire.com/api/characters/${props.id}`)
+      .then(response => response.json())
+      .then(personData => {
+        setPerson(personData);
+        setLoading(false);
+      });
+  }, [props.id]);
+
   return (
     <div className="player-container">
-      <h3>Name</h3>
-      <img src="" alt=""></img>
+      {loading ? (
+        <h3>Loading...</h3>
+      ) : (
+        <>
+          <h3>{person.name}</h3>
+          <img src={`images/${props.id}.jpg`} alt="house shield"></img>
+        </>
+      )}
     </div>
   );
 }
