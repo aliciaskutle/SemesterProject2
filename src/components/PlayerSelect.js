@@ -6,19 +6,45 @@ import PlayerCard from "./PlayerCard";
 function PlayerSelect() {
   return (
     <div className="content">
-      <Logo />
-      <h1>Select two players</h1>
-      <h2>to compete against each other</h2>
-      <PlayerCard id="148" />
-      <PlayerCard id="688" />
-      <PlayerCard id="823" />
-      <PlayerCard id="1963" />
-      <PlayerCard id="1090" />
-      <PlayerCard id="238" />
-      <PlayerCard id="326" />
-      <PlayerCard id="271" />
-      <PlayerCard id="223" />
-      <PlayerCard id="16" />
+      <div>
+        <Logo />
+      </div>
+      <div>
+        <h1>Select two players</h1>
+        <h2>to compete against each other</h2>
+      </div>
+      <div className="cards-container">
+        <div>
+          <PlayerCard id="148" />
+        </div>
+        <div>
+          <PlayerCard id="688" />
+        </div>
+        <div>
+          <PlayerCard id="823" />
+        </div>
+        <div>
+          <PlayerCard id="1963" />
+        </div>
+        <div>
+          <PlayerCard id="1090" />
+        </div>
+        <div>
+          <PlayerCard id="238" />
+        </div>
+        <div>
+          <PlayerCard id="326" />
+        </div>
+        <div>
+          <PlayerCard id="271" />
+        </div>
+        <div>
+          <PlayerCard id="223" />
+        </div>
+        <div>
+          <PlayerCard id="16" />
+        </div>
+      </div>
     </div>
   );
 }

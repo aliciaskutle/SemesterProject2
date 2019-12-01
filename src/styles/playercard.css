@@ -1,10 +1,26 @@
 .player-container {
   width: 150px;
-  height: 250px;
+  height: 280px;
   background: beige;
   margin: 20px;
 }
 
 h3 {
   padding: 0.5em;
+}
+
+.player-info {
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-1 {
+  flex: 1;
+  align-items: center;
+}
+
+.info-2 {
+  flex: 2;
+  display: flex;
 }

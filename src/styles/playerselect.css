@@ -1,12 +1,12 @@
 body {
   text-align: center;
-  background-color: rgb(44, 46, 39);
+  background-color: rgb(18, 19, 17);
   background-image: url(../images/tree.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  color: rgb(243, 161, 39);
+  color: rgb(231, 139, 0);
 }
 
 .content {
@@ -21,4 +21,10 @@ h1 {
 
 h2 {
   margin: 0;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

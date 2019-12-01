@@ -20,8 +20,14 @@ function PlayerCard(props) {
         <h3>Loading...</h3>
       ) : (
         <>
-          <h3>{person.name}</h3>
-          <img src={`images/${props.id}.svg`} alt="house shield"></img>
+          <div className="player-info">
+            <div className="info-1">
+              <h3>{person.name}</h3>
+            </div>
+            <div className="info-2">
+              <img src={`images/${props.id}.svg`} alt="house shield"></img>
+            </div>
+          </div>
         </>
       )}
     </div>
