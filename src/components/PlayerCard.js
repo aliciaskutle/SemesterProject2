@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "../styles/playercard.css";
-import CardInfo from "./CardInfo";
 
 function PlayerCard(props) {
   const [loading, setLoading] = useState(true);
@@ -22,7 +21,7 @@ function PlayerCard(props) {
       ) : (
         <>
           <h3>{person.name}</h3>
-          <img src={`images/${props.id}.jpg`} alt="house shield"></img>
+          <img src={`images/${props.id}.svg`} alt="house shield"></img>
         </>
       )}
     </div>
