@@ -3,7 +3,7 @@ import "../styles/playerselect.css";
 import Logo from "./Logo";
 import PlayerCard from "./PlayerCard";
 
-function PlayerSelect() {
+function PlayerSelect(props) {
   return (
     <div className="content">
       <div>
@@ -15,34 +15,74 @@ function PlayerSelect() {
       </div>
       <div className="cards-container">
         <div>
-          <PlayerCard id="148" />
+          <PlayerCard
+            id="148"
+            selectedPlayers={props.selectedPlayers}
+            setPlayers={props.setPlayers}
+          />
         </div>
         <div>
-          <PlayerCard id="688" />
+          <PlayerCard
+            id="688"
+            selectedPlayers={props.selectedPlayers}
+            setPlayers={props.setPlayers}
+          />
         </div>
         <div>
-          <PlayerCard id="823" />
+          <PlayerCard
+            id="823"
+            selectedPlayers={props.selectedPlayers}
+            setPlayers={props.setPlayers}
+          />
         </div>
         <div>
-          <PlayerCard id="1963" />
+          <PlayerCard
+            id="1963"
+            selectedPlayers={props.selectedPlayers}
+            setPlayers={props.setPlayers}
+          />
         </div>
         <div>
-          <PlayerCard id="1090" />
+          <PlayerCard
+            id="1090"
+            selectedPlayers={props.selectedPlayers}
+            setPlayers={props.setPlayers}
+          />
         </div>
         <div>
-          <PlayerCard id="238" />
+          <PlayerCard
+            id="238"
+            selectedPlayers={props.selectedPlayers}
+            setPlayers={props.setPlayers}
+          />
         </div>
         <div>
-          <PlayerCard id="326" />
+          <PlayerCard
+            id="326"
+            selectedPlayers={props.selectedPlayers}
+            setPlayers={props.setPlayers}
+          />
         </div>
         <div>
-          <PlayerCard id="271" />
+          <PlayerCard
+            id="271"
+            selectedPlayers={props.selectedPlayers}
+            setPlayers={props.setPlayers}
+          />
         </div>
         <div>
-          <PlayerCard id="223" />
+          <PlayerCard
+            id="223"
+            selectedPlayers={props.selectedPlayers}
+            setPlayers={props.setPlayers}
+          />
         </div>
         <div>
-          <PlayerCard id="16" />
+          <PlayerCard
+            id="16"
+            selectedPlayers={props.selectedPlayers}
+            setPlayers={props.setPlayers}
+          />
         </div>
       </div>
     </div>
@@ -51,6 +91,7 @@ function PlayerSelect() {
 
 export default PlayerSelect;
 
+//Characters
 //Arya Stark - 148
 //Lysa Arryn - 688
 //Petyr Baelish - 823

@@ -14,13 +14,24 @@ function PlayerCard(props) {
       });
   }, [props.id]);
 
+  const handleClick = () => {
+    props.setPlayers([...props.selectedPlayers, person]);
+  };
+
+  const isSelected = props.selectedPlayers.find(p => p.url === person.url);
+
   return (
     <div className="player-container">
       {loading ? (
         <h3>Loading...</h3>
       ) : (
         <>
-          <div className="player-info">
+          <div
+            className={
+              isSelected ? "player-info player-selected" : "player-info"
+            }
+            onClick={handleClick}
+          >
             <div className="info-1">
               <h3>{person.name}</h3>
             </div>
