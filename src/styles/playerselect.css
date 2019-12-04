@@ -28,3 +28,17 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+button {
+  background-color: beige;
+  color: rgb(231, 139, 0);
+  border: 2px solid rgb(231, 139, 0, 0.7);
+  margin: 20px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: rgb(231, 139, 0);
+  color: black;
+}

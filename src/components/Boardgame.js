@@ -1,19 +1,19 @@
 import React from "react";
 import "../styles/boardgame.css";
 import Logo from "./Logo";
+import Dice from "./Dice";
 
-function Boardgame() {
+function Boardgame(props) {
   return (
     <div>
       <Logo />
       <div className="board-content">
         <div className="player-container">
-          <h1>Player 1</h1>
-          <div className="player1"></div>
+          <h2>Player 1</h2>
           <div className="dice1">
-            <img src="" alt=""></img>
-            <button></button>
+            <Dice />
           </div>
+          <div className="player1"></div>
         </div>
 
         <div className="board-container">
@@ -55,12 +55,11 @@ function Boardgame() {
         </div>
 
         <div className="player-container">
-          <h1>Player 2</h1>
-          <div className="player2"></div>
+          <h2>Player 2</h2>
           <div className="dice2">
-            <img src="" alt=""></img>
-            <button></button>
+            <Dice />
           </div>
+          <div className="player2"></div>
         </div>
       </div>
     </div>

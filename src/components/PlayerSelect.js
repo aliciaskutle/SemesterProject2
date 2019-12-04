@@ -4,6 +4,14 @@ import Logo from "./Logo";
 import PlayerCard from "./PlayerCard";
 
 function PlayerSelect(props) {
+  const handleReselect = () => {
+    props.setPlayers([]);
+  };
+
+  const handleStart = () => {
+    props.setGameState("started");
+  };
+
   return (
     <div className="content">
       <div>
@@ -12,6 +20,12 @@ function PlayerSelect(props) {
       <div>
         <h1>Select two players</h1>
         <h2>to compete against each other</h2>
+        {props.selectedPlayers.length === 2 ? (
+          <div>
+            <button onClick={handleStart}>Start game</button>
+            <button onClick={handleReselect}>Select new players</button>
+          </div>
+        ) : null}
       </div>
       <div className="cards-container">
         <div>

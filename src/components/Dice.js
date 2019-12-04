@@ -1,27 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/dice.css";
 
-function Dice(props) {
+function Dice() {
+  const [eyes, setEyes] = useState(1);
+
+  const handleDiceThrow = () => {
+    setEyes(Math.floor(Math.random() * 6 + 1));
+  };
+
   return (
     <div>
-      <button onClick={() => props.setEyes((Math.random() + 1) * 6)}>
-        Roll
-      </button>
-      <img src={props.imageUrl} alt="" />
+      <button onClick={handleDiceThrow}>Roll dice</button>
+      <img className="dice" src={`images/${eyes}.svg`} alt="dice" />
     </div>
   );
 }
-
-/* 
-import Dice from './Dice';
-
-function App() {
-	const [eyes, setEyes] = useState(null)
-	return (
-		<Board eyes={eyes}/>
-		<Dice imageUrl={`/img/${eyes}.jpg`} setEyes={setEyes} />
-	)
-}
-*/
 
 export default Dice;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/playercard.css";
+/*import PlayerSelect from "./PlayerSelect";*/
 
 function PlayerCard(props) {
   const [loading, setLoading] = useState(true);
@@ -14,24 +15,26 @@ function PlayerCard(props) {
       });
   }, [props.id]);
 
-  const handleClick = () => {
-    props.setPlayers([...props.selectedPlayers, person]);
-  };
-
   const isSelected = props.selectedPlayers.find(p => p.url === person.url);
 
+  const handleClick = () => {
+    if (props.selectedPlayers.length < 2 && !isSelected) {
+      props.setPlayers([...props.selectedPlayers, person]);
+    }
+  };
+
   return (
-    <div className="player-container">
+    <div
+      className={
+        isSelected ? "player-container player-selected" : "player-container"
+      }
+      onClick={handleClick}
+    >
       {loading ? (
         <h3>Loading...</h3>
       ) : (
         <>
-          <div
-            className={
-              isSelected ? "player-info player-selected" : "player-info"
-            }
-            onClick={handleClick}
-          >
+          <div className="player-info">
             <div className="info-1">
               <h3>{person.name}</h3>
             </div>
