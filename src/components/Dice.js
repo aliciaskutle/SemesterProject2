@@ -10,8 +10,8 @@ function Dice() {
 
   return (
     <div>
-      <button onClick={handleDiceThrow}>Roll dice</button>
       <img className="dice" src={`images/${eyes}.svg`} alt="dice" />
+      <button onClick={handleDiceThrow}>Roll dice</button>
     </div>
   );
 }
