@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import "../styles/dice.css";
 
-function Dice() {
+function Dice(props) {
   const [eyes, setEyes] = useState(1);
 
   const handleDiceThrow = () => {
-    setEyes(Math.floor(Math.random() * 6 + 1));
+    const diceRoll = Math.floor(Math.random() * 6 + 1);
+    setEyes(diceRoll);
+    props.setPlayers();
+    console.log(props.players);
   };
 
   return (

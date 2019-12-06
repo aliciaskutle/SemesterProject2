@@ -7,7 +7,7 @@ function PlayerCard(props) {
   const [person, setPerson] = useState(null);
 
   useEffect(() => {
-    fetch(`https://anapioficeandfire.com/api/characters/${props.id}`)
+    fetch(props.id)
       .then(response => response.json())
       .then(personData => {
         setPerson(personData);
@@ -19,8 +19,13 @@ function PlayerCard(props) {
 
   const handleClick = () => {
     if (props.selectedPlayers.length < 2 && !isSelected) {
-      props.setPlayers([...props.selectedPlayers, person]);
+      props.setPlayers([...props.selectedPlayers, { ...person, position: 0 }]);
     }
+  };
+
+  const updateUrl = () => {
+    let baseUrl = "https://anapioficeandfire.com/api/characters/";
+    return props.id.replace(baseUrl, "");
   };
 
   return (
@@ -39,7 +44,7 @@ function PlayerCard(props) {
               <h3>{person.name}</h3>
             </div>
             <div className="info-2">
-              <img src={`images/${props.id}.svg`} alt="house shield"></img>
+              <img src={`images/${updateUrl()}.svg`} alt="house shield"></img>
             </div>
           </div>
         </>

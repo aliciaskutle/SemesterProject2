@@ -10,6 +10,7 @@ function PlayerSelect(props) {
 
   const handleStart = () => {
     props.setGameState("started");
+    props.setPlayers([...props.selectedPlayers]);
   };
 
   return (
@@ -30,70 +31,70 @@ function PlayerSelect(props) {
       <div className="cards-container">
         <div>
           <PlayerCard
-            id="148"
+            id="https://anapioficeandfire.com/api/characters/148"
             selectedPlayers={props.selectedPlayers}
             setPlayers={props.setPlayers}
           />
         </div>
         <div>
           <PlayerCard
-            id="688"
+            id="https://anapioficeandfire.com/api/characters/688"
             selectedPlayers={props.selectedPlayers}
             setPlayers={props.setPlayers}
           />
         </div>
         <div>
           <PlayerCard
-            id="823"
+            id="https://anapioficeandfire.com/api/characters/823"
             selectedPlayers={props.selectedPlayers}
             setPlayers={props.setPlayers}
           />
         </div>
         <div>
           <PlayerCard
-            id="1963"
+            id="https://anapioficeandfire.com/api/characters/1963"
             selectedPlayers={props.selectedPlayers}
             setPlayers={props.setPlayers}
           />
         </div>
         <div>
           <PlayerCard
-            id="1090"
+            id="https://anapioficeandfire.com/api/characters/1090"
             selectedPlayers={props.selectedPlayers}
             setPlayers={props.setPlayers}
           />
         </div>
         <div>
           <PlayerCard
-            id="238"
+            id="https://anapioficeandfire.com/api/characters/238"
             selectedPlayers={props.selectedPlayers}
             setPlayers={props.setPlayers}
           />
         </div>
         <div>
           <PlayerCard
-            id="326"
+            id="https://anapioficeandfire.com/api/characters/326"
             selectedPlayers={props.selectedPlayers}
             setPlayers={props.setPlayers}
           />
         </div>
         <div>
           <PlayerCard
-            id="271"
+            id="https://anapioficeandfire.com/api/characters/271"
             selectedPlayers={props.selectedPlayers}
             setPlayers={props.setPlayers}
           />
         </div>
         <div>
           <PlayerCard
-            id="223"
+            id="https://anapioficeandfire.com/api/characters/223"
             selectedPlayers={props.selectedPlayers}
             setPlayers={props.setPlayers}
           />
         </div>
         <div>
           <PlayerCard
-            id="16"
+            id="https://anapioficeandfire.com/api/characters/16"
             selectedPlayers={props.selectedPlayers}
             setPlayers={props.setPlayers}
           />

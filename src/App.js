@@ -7,7 +7,7 @@ import Result from "./components/Result";
 function App() {
   const [players, setPlayers] = useState([]);
   const [gameState, setGameState] = useState("waitingToStart");
-
+  console.log(players);
   let component = null;
 
   if (gameState === "waitingToStart") {
@@ -21,7 +21,14 @@ function App() {
   }
 
   if (gameState === "started") {
-    component = <Boardgame />;
+    component = (
+      <Boardgame
+        selectedPlayers={players}
+        setPlayers={setPlayers}
+        gameState={gameState}
+        setGameState={setGameState}
+      />
+    );
   }
 
   if (gameState === "finished") {
