@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/dice.css";
 
 function Dice(props) {
@@ -7,14 +7,16 @@ function Dice(props) {
   const handleDiceThrow = () => {
     const diceRoll = Math.floor(Math.random() * 6 + 1);
     setEyes(diceRoll);
-    // Player 1 = props.players[0]
-    // Player 2 = props.players[1]
 
     if (props.player === "1") {
       props.setPlayers(
         props.selectedPlayers.map((player, index) => {
           if (index === 0) {
-            return { ...player, position: player.position + diceRoll };
+            const newPosition = player.position + diceRoll;
+            if (newPosition >= 33) {
+              props.setGameState("finished");
+            }
+            return { ...player, position: newPosition };
           } else {
             return player;
           }
@@ -26,7 +28,11 @@ function Dice(props) {
       props.setPlayers(
         props.selectedPlayers.map((player, index) => {
           if (index === 1) {
-            return { ...player, position: player.position + diceRoll };
+            const newPosition = player.position + diceRoll;
+            if (player.position >= 33) {
+              props.setGameState("finished");
+            }
+            return { ...player, position: newPosition };
           } else {
             return player;
           }

@@ -18,6 +18,8 @@ function Boardgame(props) {
               player="1"
               setPlayers={props.setPlayers}
               selectedPlayers={props.selectedPlayers}
+              gameState={props.gameState}
+              setGameState={props.setGameState}
             />
           </div>
         </div>
@@ -47,6 +49,8 @@ function Boardgame(props) {
               player="2"
               setPlayers={props.setPlayers}
               selectedPlayers={props.selectedPlayers}
+              gameState={props.gameState}
+              setGameState={props.setGameState}
             />
           </div>
         </div>
