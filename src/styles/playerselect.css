@@ -29,16 +29,17 @@ h2 {
   justify-content: center;
 }
 
-button {
+.select-button {
   background-color: beige;
   color: rgb(231, 139, 0);
-  border: 2px solid rgb(231, 139, 0, 0.7);
+  border: 1px solid rgb(231, 139, 0);
+  border-radius: 7px;
   margin: 20px;
   padding: 10px;
   font-size: 15px;
 }
 
-button:hover {
+.select-button:hover {
   background-color: rgb(231, 139, 0);
   color: black;
 }

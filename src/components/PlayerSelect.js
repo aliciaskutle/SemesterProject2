@@ -23,8 +23,12 @@ function PlayerSelect(props) {
         <h2>to compete against each other</h2>
         {props.selectedPlayers.length === 2 ? (
           <div>
-            <button onClick={handleStart}>Start game</button>
-            <button onClick={handleReselect}>Select new players</button>
+            <button className="select-button" onClick={handleStart}>
+              Start game
+            </button>
+            <button className="select-button" onClick={handleReselect}>
+              Select new players
+            </button>
           </div>
         ) : null}
       </div>

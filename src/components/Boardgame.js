@@ -9,7 +9,7 @@ function Boardgame(props) {
     <div>
       <Logo />
       <div className="board-content">
-        <div className="player-container">
+        <div className="player-container ">
           <div className="player1">
             <h2>Player 1</h2>
           </div>
@@ -34,13 +34,13 @@ function Boardgame(props) {
                   : index === 4
                   ? "Red wedding"
                   : index === 9
-                  ? "Daenary's dragons"
+                  ? "Daenery's dragons"
                   : index === 19
-                  ? "Trap"
+                  ? "The Night King"
                   : index === 24
-                  ? "Trap"
+                  ? "The Red Woman"
                   : index === 29
-                  ? "Trap"
+                  ? "Wildfire"
                   : index === 34
                   ? "End"
                   : index}

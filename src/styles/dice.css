@@ -1,3 +1,37 @@
 .dice {
   margin: 25px;
 }
+
+.dice-button {
+  background: linear-gradient(
+    0deg,
+    rgba(231, 139, 0, 1) 20%,
+    rgb(247, 173, 62) 100%
+  );
+  border: 1px solid rgba(0, 0, 0);
+  color: black;
+  border-radius: 7px;
+  margin: 5px 20px 20px 20px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.dice-button:hover {
+  background: rgb(255, 153, 0);
+  color: rgb(255, 255, 255);
+}
+
+/*.select-button {
+  background-color: beige;
+  color: rgb(231, 139, 0);
+  border: 1px solid rgb(231, 139, 0);
+  border-radius: 7px;
+  margin: 20px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.select-button:hover {
+  background-color: rgb(231, 139, 0);
+  color: black;
+}*/
