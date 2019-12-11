@@ -1,15 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/boardgame.css";
 import Logo from "./Logo";
 import Dice from "./Dice";
 import PlayerPawn from "./PlayerPawn";
 
 function Boardgame(props) {
+  const [activePlayer, setActivePlayer] = useState("1");
+  const boardFieldClassName = index => {
+    return index === 0
+      ? "start"
+      : index === 4
+      ? "trap1"
+      : index === 9
+      ? "trap2"
+      : index === 19
+      ? "trap3"
+      : index === 24
+      ? "trap4"
+      : index === 29
+      ? "trap5"
+      : index === 34
+      ? "end"
+      : index;
+  };
+
   return (
     <div>
       <Logo />
       <div className="board-content">
-        <div className="player-container ">
+        <div className="dice-container ">
           <div className="player1">
             <h2>Player 1</h2>
           </div>
@@ -20,6 +39,8 @@ function Boardgame(props) {
               selectedPlayers={props.selectedPlayers}
               gameState={props.gameState}
               setGameState={props.setGameState}
+              activePlayer={activePlayer}
+              setActivePlayer={setActivePlayer}
             />
           </div>
         </div>
@@ -28,11 +49,14 @@ function Boardgame(props) {
             .fill()
             .map((_, index) => index)
             .map((_, index) => (
-              <div key={index} className="board-field">
+              <div
+                key={index}
+                className={`board-field ${boardFieldClassName(index)}`}
+              >
                 {index === 0
                   ? "Start"
                   : index === 4
-                  ? "Red wedding"
+                  ? "The Red wedding"
                   : index === 9
                   ? "Daenery's dragons"
                   : index === 19
@@ -54,7 +78,7 @@ function Boardgame(props) {
             ))}
         </div>
 
-        <div className="player-container">
+        <div className="dice-container">
           <div className="player2">
             <h2>Player 2</h2>
           </div>
@@ -65,6 +89,8 @@ function Boardgame(props) {
               selectedPlayers={props.selectedPlayers}
               gameState={props.gameState}
               setGameState={props.setGameState}
+              activePlayer={activePlayer}
+              setActivePlayer={setActivePlayer}
             />
           </div>
         </div>
