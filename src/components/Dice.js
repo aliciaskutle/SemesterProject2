@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../styles/dice.css";
 
 function Dice(props) {
   const [eyes, setEyes] = useState(1);
+
+  //Traps: 4, 9, 19, 24, 29
 
   const handleDiceThrow = () => {
     const diceRoll = Math.floor(Math.random() * 6 + 1);
@@ -24,6 +26,7 @@ function Dice(props) {
       );
     }
 
+    //Fix return
     if (props.player === "2") {
       props.setPlayers(
         props.selectedPlayers.map((player, index) => {

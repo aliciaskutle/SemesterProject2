@@ -1,0 +1,34 @@
+.rotate-star {
+  width: 500px;
+  animation: rotation 20s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.winner-h1 {
+  margin: 25px 0 0 0;
+}
+
+.winner-h2 {
+  position: relative;
+  z-index: 2;
+  animation: mymove 3s;
+  animation-fill-mode: forwards;
+  color: rgb(17, 16, 15);
+  margin: 0;
+}
+
+@keyframes mymove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 220px;
+  }
+}

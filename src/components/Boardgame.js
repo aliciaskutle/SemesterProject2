@@ -29,7 +29,21 @@ function Boardgame(props) {
             .map((_, index) => index)
             .map((_, index) => (
               <div key={index} className="board-field">
-                {index === 0 ? "Start" : index === 34 ? "End" : index}
+                {index === 0
+                  ? "Start"
+                  : index === 4
+                  ? "Red wedding"
+                  : index === 9
+                  ? "Daenary's dragons"
+                  : index === 19
+                  ? "Trap"
+                  : index === 24
+                  ? "Trap"
+                  : index === 29
+                  ? "Trap"
+                  : index === 34
+                  ? "End"
+                  : index}
                 {props.selectedPlayers[0].position === index ? (
                   <PlayerPawn id={props.selectedPlayers[0].url} />
                 ) : null}
