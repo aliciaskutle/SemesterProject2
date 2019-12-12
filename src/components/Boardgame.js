@@ -26,11 +26,39 @@ function Boardgame(props) {
 
   return (
     <div>
-      <Logo />
+      <div className="header">
+        <div className="header-sidebar sidebar1">
+          <h3>Instructions:</h3>
+          <p>
+            Player 1 has to click the "Roll dice" button to start the game. Then
+            the turns will swap - except if you roll a six, then you will get
+            another turn.
+          </p>
+        </div>
+        <Logo />
+        <div className="header-sidebar sidebar2">
+          <h3>Warning!</h3>
+          <p>
+            Beware of the traps along your way to finish the game. You might be
+            unlucky and get a penalty that will delay you towards the goal.
+          </p>
+        </div>
+      </div>
       <div className="board-content">
         <div className="dice-container ">
           <div className="player1">
             <h2>Player 1</h2>
+            <h3 className="player-h3">{props.selectedPlayers[0].name}</h3>
+            <img
+              className="player-shield"
+              src={`images/${props.selectedPlayers[0].url
+                .replace("https://anapioficeandfire.com/api/characters/", "")
+                .replace(
+                  "https://www.anapioficeandfire.com/api/characters/",
+                  ""
+                )}.svg`}
+              alt="house shield pawn"
+            />
           </div>
           <div className="dice1">
             <Dice
@@ -81,6 +109,17 @@ function Boardgame(props) {
         <div className="dice-container">
           <div className="player2">
             <h2>Player 2</h2>
+            <h3 className="player-h3">{props.selectedPlayers[1].name}</h3>
+            <img
+              className="player-shield"
+              src={`images/${props.selectedPlayers[1].url
+                .replace("https://anapioficeandfire.com/api/characters/", "")
+                .replace(
+                  "https://www.anapioficeandfire.com/api/characters/",
+                  ""
+                )}.svg`}
+              alt="house shield pawn"
+            />
           </div>
           <div className="dice2">
             <Dice

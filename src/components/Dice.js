@@ -111,6 +111,7 @@ function Dice(props) {
   return (
     <div>
       <img className="dice" src={`images/${eyes}.svg`} alt="dice" />
+
       <button
         className="dice-button"
         onClick={handleDiceThrow}
@@ -118,6 +119,14 @@ function Dice(props) {
       >
         Roll dice
       </button>
+      <div
+        className="swap-turn"
+        style={{
+          display: props.player === props.activePlayer ? "block" : "none"
+        }}
+      >
+        Your turn
+      </div>
     </div>
   );
 }

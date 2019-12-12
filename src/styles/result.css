@@ -1,5 +1,5 @@
 .rotate-star {
-  width: 500px;
+  width: 570px;
   animation: rotation 20s infinite linear;
 }
 @keyframes rotation {
@@ -16,11 +16,20 @@
 }
 
 .winner-h2 {
+  color: rgb(17, 16, 15);
+}
+
+.winner-shield {
+  height: 130px;
+  width: auto;
+}
+
+.winner-info {
+  height: 1px;
   position: relative;
   z-index: 2;
   animation: mymove 3s;
   animation-fill-mode: forwards;
-  color: rgb(17, 16, 15);
   margin: 0;
 }
 
@@ -29,6 +38,6 @@
     top: 0px;
   }
   to {
-    top: 220px;
+    top: 180px;
   }
 }

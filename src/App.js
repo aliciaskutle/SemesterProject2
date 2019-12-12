@@ -7,7 +7,7 @@ import Result from "./components/Result";
 function App() {
   const [players, setPlayers] = useState([]);
   const [gameState, setGameState] = useState("waitingToStart");
-  console.log(players);
+
   let component = null;
 
   if (gameState === "waitingToStart") {
@@ -32,7 +32,7 @@ function App() {
   }
 
   if (gameState === "finished") {
-    component = <Result selectedPlayers={players} setPlayers={setPlayers} />;
+    component = <Result selectedPlayers={players} />;
   }
 
   return <div className="App">{component}</div>;

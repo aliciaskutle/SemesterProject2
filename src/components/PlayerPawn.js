@@ -4,7 +4,8 @@ import "../styles/playerpawn.css";
 function PlayerPawn(props) {
   const updateUrl = () => {
     let baseUrl = "https://anapioficeandfire.com/api/characters/";
-    return props.id.replace(baseUrl, "");
+    let baseUrlWithWWW = "https://www.anapioficeandfire.com/api/characters/";
+    return props.id.replace(baseUrl, "").replace(baseUrlWithWWW, "");
   };
 
   return (

@@ -1,3 +1,35 @@
+.header {
+  display: flex;
+}
+
+.header-sidebar {
+  flex: 1;
+  width: 100px;
+  height: 175px;
+  align-content: center;
+  margin: 40px 50px 0 50px;
+  text-align: center;
+  background: rgb(38, 30, 26, 0.7);
+  border: 2px solid #3c3c3d;
+}
+
+.header-sidebar h3 {
+  margin: 10px 0 0 0;
+}
+
+.header-sidebar p {
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.sidebar1 {
+  margin-left: 165px;
+}
+
+.sidebar2 {
+  margin-right: 165px;
+}
+
 .board-content {
   margin: 50px auto;
   width: 80%;
@@ -7,10 +39,10 @@
 
 .dice-container {
   flex: 1;
-  width: 150px;
-  height: 275px;
+  width: 200px;
+  height: 445px;
   background: beige;
-  margin: 0 20px 20px 20px;
+  margin: 0 15px 15px 15px;
   box-shadow: 5px 5px 40px 10px rgb(0, 0, 0);
   border: 2px solid #3c3c3d;
 }
@@ -32,6 +64,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.player-shield {
+  width: 90px;
+  height: auto;
+}
+
+.player-h3 {
+  margin: 0;
 }
 
 .player1,
