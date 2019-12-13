@@ -84,15 +84,15 @@ function Boardgame(props) {
                 {index === 0
                   ? "Start"
                   : index === 4
-                  ? "The Red wedding"
+                  ? "4"
                   : index === 9
-                  ? "Daenery's dragons"
+                  ? "9"
                   : index === 19
-                  ? "The Night King"
+                  ? "19"
                   : index === 24
-                  ? "The Red Woman"
+                  ? "24"
                   : index === 29
-                  ? "Wildfire"
+                  ? "29"
                   : index === 34
                   ? "End"
                   : index}

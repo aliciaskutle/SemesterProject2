@@ -18,8 +18,9 @@
 }
 
 .header-sidebar p {
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin: 0;
+  font-size: 0.9em;
 }
 
 .sidebar1 {
@@ -31,7 +32,7 @@
 }
 
 .board-content {
-  margin: 50px auto;
+  margin: 30px auto;
   width: 80%;
   max-width: 1500px;
   display: flex;
@@ -56,7 +57,7 @@
 
 .board-field {
   border: 2px solid #3c3c3d;
-  font-family: Helvetica;
+  font-family: roboto, sans-serif;
   font-weight: bold;
   color: white;
   background-color: black;
@@ -79,4 +80,49 @@
 .player1,
 .player2 {
   padding-top: 10px;
+}
+
+.trap1 {
+  text-align: center;
+  background-image: url(/images/red.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+}
+
+.trap2 {
+  text-align: center;
+  background-image: url(/images/trap2.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+}
+
+.trap3 {
+  text-align: center;
+  background-image: url(/images/trap3.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+}
+
+.trap4 {
+  text-align: center;
+  background-image: url(/images/trap4.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+}
+
+.trap5 {
+  text-align: center;
+  background-image: url(/images/trap5.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: rgb(255, 255, 255);
 }
