@@ -39,7 +39,7 @@ function Boardgame(props) {
         <div className="header-sidebar sidebar2">
           <h3>Warning!</h3>
           <p>
-            Beware of the traps along your way to finish the game. You might be
+            Beware of the traps along the way to finish the game. You might be
             unlucky and get a penalty that will delay you towards the goal.
           </p>
         </div>
