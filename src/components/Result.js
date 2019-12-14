@@ -11,10 +11,17 @@ function Result(props) {
     return winner.url.replace(baseUrl, "").replace(baseUrlWithWWW, "");
   };
 
+  const handleRestart = () => {
+    props.setGameState("waitingToStart");
+  };
+
   return (
     <div className="result-container">
       <Logo />
       <div className="result-content">
+        <button onClick={handleRestart} className="result-button">
+          Play again?
+        </button>
         <h1 className="winner-h1">The winner of the Board Battle is:</h1>
         <div className="winner-info">
           <h2 className="winner-h2">{winner.name}</h2>

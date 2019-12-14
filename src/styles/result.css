@@ -28,7 +28,7 @@
   height: 1px;
   position: relative;
   z-index: 2;
-  animation: mymove 3s;
+  animation: mymove 2s;
   animation-fill-mode: forwards;
   margin: 0;
 }
@@ -38,6 +38,36 @@
     top: 0px;
   }
   to {
-    top: 180px;
+    top: 190px;
   }
+}
+
+.result-button {
+  background: linear-gradient(
+    0deg,
+    rgba(231, 139, 0, 1) 20%,
+    rgb(247, 173, 62) 100%
+  );
+  border: 1px solid rgba(0, 0, 0);
+  color: black;
+  border-radius: 7px;
+  margin: 5px 20px 20px 20px;
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+  animation: fadein 4s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.result-button:hover {
+  background: rgb(255, 153, 0);
+  color: rgb(255, 255, 255);
 }

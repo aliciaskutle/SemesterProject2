@@ -32,7 +32,9 @@ function App() {
   }
 
   if (gameState === "finished") {
-    component = <Result selectedPlayers={players} />;
+    component = (
+      <Result selectedPlayers={players} setGameState={setGameState} />
+    );
   }
 
   return <div className="App">{component}</div>;
