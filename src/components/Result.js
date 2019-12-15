@@ -12,7 +12,8 @@ function Result(props) {
   };
 
   const handleRestart = () => {
-    props.setGameState("waitingToStart");
+    window.location.reload();
+    // props.setGameState("waitingToStart");
   };
 
   return (
