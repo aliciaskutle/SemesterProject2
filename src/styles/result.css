@@ -55,7 +55,7 @@
   padding: 10px;
   font-size: 15px;
   text-align: center;
-  animation: fadein 4s;
+  animation: fadein 5s;
 }
 
 @keyframes fadein {
@@ -68,6 +68,6 @@
 }
 
 .result-button:hover {
-  background: rgb(255, 153, 0);
-  color: rgb(255, 255, 255);
+  background: beige;
+  color: rgba(231, 139, 0, 1);
 }
